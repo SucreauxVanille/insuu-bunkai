@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>因数分解君</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1>因数分解君</h1>
+    <p class="subtitle">式を因数分解しよう！</p>
+
+    <!-- 連続正解表示 -->
+    <div id="streak" class="streak-display" style="display: none;">
+      連続正解：<span id="streakCount">0</span>
+    </div>
+
+    <!-- 問題表示 -->
+    <div class="problem-box">
+      <div id="problem" class="problem-expression">
+        x² + x − 12
+      </div>
+    </div>
+
+    <!-- 回答入力 -->
+    <div class="answer-box">
+
+      <div class="factor">
+        <span class="paren">(</span>
+        <span class="x-char">x</span>
+
+        <select id="sign1" class="sign-select">
+          <option value="+">+</option>
+          <option value="-">−</option>
+        </select>
+
+        <input
+          type="number"
+          id="num1"
+          class="num-input"
+          min="1"
+          max="12"
+          placeholder="?"
+        >
+
+        <span class="paren">)</span>
+      </div>
+
+      <div class="factor">
+        <span class="paren">(</span>
+        <span class="x-char">x</span>
+
+        <select id="sign2" class="sign-select">
+          <option value="+">+</option>
+          <option value="-">−</option>
+        </select>
+
+        <input
+          type="number"
+          id="num2"
+          class="num-input"
+          min="1"
+          max="12"
+          placeholder="?"
+        >
+
+        <span class="paren">)</span>
+      </div>
+
+    </div>
+
+    <!-- ボタン -->
+    <div class="button-group">
+      <button id="checkBtn">判定</button>
+      <button id="nextBtn">次の問題</button>
+    </div>
+
+    <!-- 結果表示 -->
+    <div id="result" class="result-message"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
