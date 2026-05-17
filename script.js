@@ -47,12 +47,22 @@ function generateProblem() {
   const b = currentM + currentN;
   const c = currentM * currentN;
 
-  problemEl.textContent = `x² ${formatTerm(b)}x ${formatTerm(c)}`;
+ problemEl.textContent = formatExpression(b, c);
 
   clearInputs();
   resultEl.textContent = "";
 }
+function formatExpression(b, c) {
+  let expression = "x²";
 
+  if (b !== 0) {
+    expression += ` ${formatTerm(b)}x`;
+  }
+
+  expression += ` ${formatTerm(c)}`;
+
+  return expression;
+}
 // ----------------------
 // 入力クリア
 // ----------------------
