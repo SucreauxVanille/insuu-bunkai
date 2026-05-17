@@ -91,7 +91,10 @@ h1 {
 
 .x-char {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 600;
+  font-style: italic;
+  font-family: "Times New Roman", serif;
+  margin-right: 2px;
 }
 
 .sign-select {
