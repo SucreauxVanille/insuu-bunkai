@@ -47,16 +47,16 @@ function generateProblem() {
   const b = currentM + currentN;
   const c = currentM * currentN;
 
- problemEl.textContent = formatExpression(b, c);
+ problemEl.innerHTML = formatExpression(b, c);
 
   clearInputs();
   resultEl.textContent = "";
 }
 function formatExpression(b, c) {
-  let expression = "x²";
+  let expression = `<span class="x-char">x</span>²`;
 
   if (b !== 0) {
-    expression += ` ${formatTerm(b)}x`;
+    expression += ` ${formatXTerm(b)}`;
   }
 
   expression += ` ${formatTerm(c)}`;
