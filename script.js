@@ -30,7 +30,11 @@ function formatTerm(num) {
   if (num > 0) return `+ ${num}`;
   return `− ${Math.abs(num)}`;
 }
-
+function formatXTerm(num) {
+  if (num === 1) return "+ x";
+  if (num === -1) return "− x";
+  return `${formatTerm(num)}x`;
+}
 // ----------------------
 // 問題生成
 // ----------------------
@@ -56,7 +60,7 @@ function formatExpression(b, c) {
   let expression = `<span class="x-char">x</span>²`;
 
   if (b !== 0) {
-    expression += ` ${formatXTerm(b)}`;
+  expression += ` ${formatXTerm(b)}`;
   }
 
   expression += ` ${formatTerm(c)}`;
