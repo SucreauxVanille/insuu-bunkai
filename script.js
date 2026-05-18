@@ -31,9 +31,12 @@ function formatTerm(num) {
   return `− ${Math.abs(num)}`;
 }
 function formatXTerm(num) {
-  if (num === 1) return "+ x";
-  if (num === -1) return "− x";
-  return `${formatTerm(num)}x`;
+  const xSpan = `<span class="x-char">x</span>`;
+
+  if (num === 1) return `+ ${xSpan}`;
+  if (num === -1) return `− ${xSpan}`;
+
+  return `${formatTerm(num)}${xSpan}`;
 }
 // ----------------------
 // 問題生成
