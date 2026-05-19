@@ -186,28 +186,39 @@ button:active {
 ========================= */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 
   .problem-expression {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .answer-box {
+    gap: 4px;
+  }
+
+  .factor {
+    gap: 2px;
   }
 
   .paren {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   .x-char {
-    font-size: 1.6rem;
+    font-size: 1.35rem;
   }
 
   .num-input {
-    width: 65px;
-    font-size: 1.2rem;
+    width: 48px;
+    font-size: 1rem;
+    padding: 8px 4px;
   }
 
   .sign-select {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    padding: 6px 4px;
+    width: 44px;
   }
 
   button {
